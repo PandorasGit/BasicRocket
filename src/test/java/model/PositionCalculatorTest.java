@@ -16,4 +16,15 @@ public class PositionCalculatorTest {
         Assertions.assertEquals(50f,pos);
 
     }
+
+    @Test
+    public void calcPosBasedOnVelocitySquaredTest(){
+        float initVel = 10f;
+        float accel = -1f;
+        float finalVel = 0f;
+
+        PositionCalculator positionCalculator = new PositionCalculator();
+        float pos = positionCalculator.calcPosBasedOnVelocitySquared(initVel,finalVel,accel);
+        Assertions.assertEquals(50f,pos);
+    }
 }

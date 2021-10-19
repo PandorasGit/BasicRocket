@@ -15,4 +15,16 @@ public class VelocityCalculatorTest {
         float finalVelocity = velocityCalculator.calculateBasedOnAccelerationOverTime(initialVelocity,acceleration,time);
         Assertions.assertEquals(0f,finalVelocity);
     }
+
+    @Test
+    public void calculateBasedOnChangeInPositionTest(){
+        float initialVelocity = 10f;
+        float acceleration = -1f;
+        float changeInPosition = 50f;
+
+
+        VelocityCalculator velocityCalculator =  new VelocityCalculator();
+        float finalVelocity = velocityCalculator.calculateBasedOnChangeInPosition(initialVelocity,acceleration,changeInPosition);
+        Assertions.assertEquals(0f,finalVelocity);
+    }
 }

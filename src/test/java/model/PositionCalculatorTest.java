@@ -27,4 +27,14 @@ public class PositionCalculatorTest {
         float pos = positionCalculator.calcPosBasedOnVelocitySquared(initVel,finalVel,accel);
         Assertions.assertEquals(50f,pos);
     }
+
+    public void calcPosBasedOnChangeInVelocityTest(){
+        float initialVelocity = 10f;
+        float finalVelocity = 0f;
+        float time = 10f;
+
+        PositionCalculator positionCalculator = new PositionCalculator();
+        float pos = positionCalculator.calcPosBasedOnChangeInVelocity(initialVelocity,finalVelocity,time);
+        Assertions.assertEquals(50f,pos);
+    }
 }

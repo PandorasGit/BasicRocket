@@ -10,8 +10,8 @@ public class TsiolkovskyRocketEquation {
 
     }
 
-    public float getSpecificImpulseInMetersPerSecond(float specificImpulse, float gravity) {
-        return specificImpulse*gravity;
+    public float getSpecificImpulseInMetersPerSecond(float specificImpulse) {
+        return  specificImpulse*9.8f;
     }
 
     public float getDeltaV(float lnOfWetMassOverDryMass, float specificImpulseMs) {

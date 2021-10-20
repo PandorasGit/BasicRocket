@@ -21,7 +21,7 @@ public class TsiolkovskyRocketEquationTest {
         float gravity = 9.8f;
 
         TsiolkovskyRocketEquation tsiolkovskyRocketEquation = new TsiolkovskyRocketEquation();
-        float expectedResult = tsiolkovskyRocketEquation.getSpecificImpulseInMetersPerSecond(specificImpulse,gravity);
+        float expectedResult = tsiolkovskyRocketEquation.getSpecificImpulseInMetersPerSecond(specificImpulse);
         Assertions.assertEquals(98f,expectedResult);
     }
 
@@ -29,7 +29,7 @@ public class TsiolkovskyRocketEquationTest {
     public void getDeltaVTest(){
         TsiolkovskyRocketEquation tsiolkovskyRocketEquation = new TsiolkovskyRocketEquation();
         float lnOfWetMassOverDryMass = tsiolkovskyRocketEquation.naturalLogOfChangeInMassTest(10f,5f);
-        float specificImpulseMs = tsiolkovskyRocketEquation.getSpecificImpulseInMetersPerSecond(10f,9.8f);
+        float specificImpulseMs = tsiolkovskyRocketEquation.getSpecificImpulseInMetersPerSecond(10f);
 
         float deltaV = tsiolkovskyRocketEquation.getDeltaV(lnOfWetMassOverDryMass,specificImpulseMs);
         Assertions.assertEquals(29.50094f,deltaV);

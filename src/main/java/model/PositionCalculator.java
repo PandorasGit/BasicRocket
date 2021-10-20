@@ -13,4 +13,10 @@ public class PositionCalculator {
          float changeInVelocity = (float) (Math.pow(initialVelocity,2) - Math.pow(finalVelocity,2));
          return changeInVelocity / -(2*acceleration);
     }
+
+
+    // Delta position = ((Vfinal + Vinitial)/2) multiplied by time
+    public float calcPosBasedOnChangeInVelocity(float initialVelocity, float finalVelocity, float time) {
+        return ((initialVelocity + finalVelocity)/2) * time;
+    }
 }

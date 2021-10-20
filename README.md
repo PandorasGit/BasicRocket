@@ -4,6 +4,9 @@ This application is intended to run basic model rocket simulations
 
 Wendall Roberts
 
+##Functionality
+*Calculate Apogee of Rockets ignoring wind resistance
+
 ##Notes
 
 I am aware that some of the functions have way to many paramaters, but that is because

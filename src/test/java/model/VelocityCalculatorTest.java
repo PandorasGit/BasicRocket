@@ -27,4 +27,6 @@ public class VelocityCalculatorTest {
         float finalVelocity = velocityCalculator.calculateBasedOnChangeInPosition(initialVelocity,acceleration,changeInPosition);
         Assertions.assertEquals(0f,finalVelocity);
     }
+
+
 }

@@ -28,4 +28,10 @@ public class Rocket {
         PositionCalculator positionCalculator = new PositionCalculator();
         return positionCalculator.calcPosBasedOnChangeInVelocity(0,deltaV,timeToBurnOut);
     }
+
+    public float calculateRocketApogee(float positionAtBurnOut) {
+        PositionCalculator positionCalculator = new PositionCalculator();
+        float heightGained = positionCalculator.calcPosBasedOnVelocitySquared(deltaV,0f,-9.8f);
+        return positionAtBurnOut+heightGained;
+    }
 }

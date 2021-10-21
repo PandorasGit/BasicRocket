@@ -28,6 +28,7 @@ public class PositionCalculatorTest {
         Assertions.assertEquals(50f,pos);
     }
 
+    @Test
     public void calcPosBasedOnChangeInVelocityTest(){
         float initialVelocity = 10f;
         float finalVelocity = 0f;

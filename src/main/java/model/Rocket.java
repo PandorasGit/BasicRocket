@@ -13,10 +13,10 @@ public class Rocket {
         this.wetMass = wetMass;
         this.dryMass = dryMass;
         this.timeToBurnOut = timeToBurnOut;
-        this.deltaV = calulateDeltaV();
+        this.deltaV = calculateDeltaV();
     }
 
-    private float calulateDeltaV(){
+    private float calculateDeltaV(){
         TsiolkovskyRocketEquation tsiolkovskyRocketEquation = new TsiolkovskyRocketEquation();
         float impulseInMs = tsiolkovskyRocketEquation.getSpecificImpulseInMetersPerSecond(specificImpulse);
         float lnOfMass = tsiolkovskyRocketEquation.naturalLogOfChangeInMassTest(wetMass,dryMass);

@@ -1,12 +1,14 @@
 {
-  "Rockets": [
-    {
-      "A_Rocket": {
-        "specificImpulse": 2.5,
-        "wetMass": 7.6,
-        "dryMass": 4.1,
-        "timeToBurnOut": 0.6
+  "RocketList":{
+    "Rockets": [
+     {
+       "A_Rocket": {
+          "specificImpulse": 2.5,
+          "wetMass": 7.6,
+          "dryMass": 4.1,
+          "timeToBurnOut": 0.6
+        }
       }
-    }
-  ]
+    ]
+  }
 }

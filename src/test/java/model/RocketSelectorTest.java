@@ -28,4 +28,22 @@ public class RocketSelectorTest {
         Rocket resultRocket = rocketSelector.selectRocket(selection);
         Assertions.assertEquals(rocketArrayList.get(0).calculateRocketHeightAtBurnOut(),resultRocket.calculateRocketHeightAtBurnOut());
     }
+
+    public void rocketDTest() throws IOException {
+        InputStream inputStream = Thread.currentThread().getContextClassLoader()
+                .getResourceAsStream("TestRocketDirectory.json");
+        JSONArray rocketsJson = JsonPath.read(inputStream,"$.*");
+
+        SelectionToIndex selectionToIndex = new SelectionToIndex();
+        int selection = selectionToIndex.convert("d");
+        RocketSelector rocketSelector = new RocketSelector();
+
+        ArrayList<Rocket> rocketArrayList = new ArrayList<>();
+        rocketArrayList.add(new Rocket(20f,42.2f,17.27f,1.6f));
+        rocketSelector.createRocketArrayList(rocketsJson);
+
+
+        Rocket resultRocket = rocketSelector.selectRocket(selection);
+        Assertions.assertEquals(rocketArrayList.get(0).calculateRocketHeightAtBurnOut(),resultRocket.calculateRocketHeightAtBurnOut());
+    }
 }

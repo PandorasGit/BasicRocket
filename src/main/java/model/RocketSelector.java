@@ -10,7 +10,7 @@ public class RocketSelector {
 
     public void createRocketArrayList(JSONArray rocketsJson) {
         RocketParser rocketParser = new RocketParser();
-        for(int i =0;i<rocketsJson.size();i++){
+        for(int i=0;i<=4;i++){
             Rocket newRocket = rocketParser.parse(rocketsJson,i);
             rocketArrayList.add(newRocket);
         }

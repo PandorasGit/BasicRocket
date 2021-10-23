@@ -5,8 +5,12 @@ import net.minidev.json.JSONArray;
 
 public class RocketParser {
     public Rocket parse(JSONArray inputJson, int index) {
+        IndexToSelection indexToSelection= new IndexToSelection();
+        String selection = indexToSelection.convert(index);
 
-        JSONArray rocketInfo = JsonPath.read(inputJson,String.format("$..Rockets[%d]",index));
+        String seachQuery = String.format("$..%s",selection);
+
+        JSONArray rocketInfo = JsonPath.read(inputJson,seachQuery);
         JSONArray impulseJson = JsonPath.read(rocketInfo,"$..specificImpulse");
         float specificImpulse = Float.parseFloat(impulseJson.get(0).toString());
 
@@ -21,4 +25,6 @@ public class RocketParser {
 
         return new Rocket(specificImpulse,wetMass,dryMass,timeToBurnOut);
     }
+
+
 }

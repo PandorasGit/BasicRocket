@@ -29,6 +29,7 @@ public class RocketSelectorTest {
         Assertions.assertEquals(rocketArrayList.get(0).calculateRocketHeightAtBurnOut(),resultRocket.calculateRocketHeightAtBurnOut());
     }
 
+    @Test
     public void rocketDTest() throws IOException {
         InputStream inputStream = Thread.currentThread().getContextClassLoader()
                 .getResourceAsStream("TestRocketDirectory.json");

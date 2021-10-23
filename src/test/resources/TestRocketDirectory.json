@@ -1,31 +1,31 @@
 {
   "RocketList":{
     "Rockets": [
-     {
-       "A_Rocket": {
+      {
+        "A": {
           "specificImpulse": 2.5,
           "wetMass": 7.6,
           "dryMass": 4.1,
           "timeToBurnOut": 0.6
         },
-       "B_Rocket":{
-         "specificImpulse": 5,
-         "wetMass": 21,
-         "dryMass": 12.6,
-         "timeToBurnOut": 1.1
-       },
-       "C_Rocket":{
-         "specificImpulse": 10,
-         "wetMass": 25.8,
-         "dryMass": 13.32,
-         "timeToBurnOut": 0.8
-       },
-       "D_Rocket":{
-         "specificImpulse": 20,
-         "wetMass": 42.2,
-         "dryMass": 17.27,
-         "timeToBurnOut": 1.6
-       }
+        "B":{
+          "specificImpulse": 5,
+          "wetMass": 21,
+          "dryMass": 12.6,
+          "timeToBurnOut": 1.1
+        },
+        "C":{
+          "specificImpulse": 10,
+          "wetMass": 25.8,
+          "dryMass": 13.32,
+          "timeToBurnOut": 0.8
+        },
+        "D":{
+          "specificImpulse": 20,
+          "wetMass": 42.2,
+          "dryMass": 17.27,
+          "timeToBurnOut": 1.6
+        }
       }
     ]
   }

@@ -20,4 +20,12 @@ public class SelectionToIndexTest {
         int result = selection.convert("B");
         Assertions.assertEquals(expected,result);
     }
+
+    @Test
+    public void convertFTest(){
+        int expected = 0;
+        SelectionToIndex selection = new SelectionToIndex();
+        int result = selection.convert("f");
+        Assertions.assertEquals(expected,result);
+    }
 }

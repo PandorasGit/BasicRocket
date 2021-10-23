@@ -9,7 +9,6 @@ public class RocketSelector {
     private ArrayList<Rocket> rocketArrayList = new ArrayList<>();
 
     public void createRocketArrayList(JSONArray rocketsJson) {
-        //JSONArray rocketArray = JsonPath.read(rocketsJson, "$..Rockets");
         RocketParser rocketParser = new RocketParser();
         for(int i =0;i<rocketsJson.size();i++){
             Rocket newRocket = rocketParser.parse(rocketsJson,i);
@@ -18,6 +17,7 @@ public class RocketSelector {
     }
 
     public Rocket selectRocket(int selection) {
+
         return rocketArrayList.get(selection);
     }
 }

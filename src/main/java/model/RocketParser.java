@@ -8,23 +8,34 @@ public class RocketParser {
         IndexToSelection indexToSelection= new IndexToSelection();
         String selection = indexToSelection.convert(index);
 
-        String seachQuery = String.format("$..%s",selection);
+        String searchQuery = String.format("$..%s",selection);
+        JSONArray rocketInfo = JsonPath.read(inputJson,searchQuery);
 
-        JSONArray rocketInfo = JsonPath.read(inputJson,seachQuery);
-        JSONArray impulseJson = JsonPath.read(rocketInfo,"$..specificImpulse");
-        float specificImpulse = Float.parseFloat(impulseJson.get(0).toString());
-
-        JSONArray wetMassJson = JsonPath.read(rocketInfo,"$..wetMass");
-        float wetMass = Float.parseFloat(wetMassJson.get(0).toString());
-
-        JSONArray dryMassJson = JsonPath.read(rocketInfo,"$..dryMass");
-        float dryMass = Float.parseFloat(dryMassJson.get(0).toString());
-
-        JSONArray timeToBurnOutJson = JsonPath.read(rocketInfo,"$..timeToBurnOut");
-        float timeToBurnOut = Float.parseFloat(timeToBurnOutJson.get(0).toString());
+        float specificImpulse = setSpecificImpulse(rocketInfo);
+        float wetMass = setWetMass(rocketInfo);
+        float dryMass = setDryMass(rocketInfo);
+        float timeToBurnOut = setTimeToBurnOut(rocketInfo);
 
         return new Rocket(specificImpulse,wetMass,dryMass,timeToBurnOut);
     }
 
+    private float setSpecificImpulse(JSONArray rocketInfo){
+        JSONArray impulseJson = JsonPath.read(rocketInfo,"$..specificImpulse");
+        return Float.parseFloat(impulseJson.get(0).toString());
+    }
 
+    private float setWetMass(JSONArray rocketInfo){
+        JSONArray wetMassJson = JsonPath.read(rocketInfo,"$..wetMass");
+        return Float.parseFloat(wetMassJson.get(0).toString());
+    }
+
+    private float setDryMass(JSONArray rocketInfo){
+        JSONArray dryMassJson = JsonPath.read(rocketInfo,"$..dryMass");
+        return Float.parseFloat(dryMassJson.get(0).toString());
+    }
+
+    private float setTimeToBurnOut(JSONArray rocketInfo){
+        JSONArray timeToBurnOutJson = JsonPath.read(rocketInfo,"$..timeToBurnOut");
+        return Float.parseFloat(timeToBurnOutJson.get(0).toString());
+    }
 }

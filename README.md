@@ -4,8 +4,18 @@ This application is intended to run basic model rocket simulations
 
 Wendall Roberts
 
+##Version
+v 0.1.0
+
 ##Functionality
-*Calculate Apogee of Rockets ignoring wind resistance
+Calculate Apogee of Rockets ignoring wind resistance
+
+Print Results to command Line 
+
+Current main entry point is opening it via intelij ide and
+right-clicking run on the Main class.
+I am assuming it can also just be ran via the cmd by opening the main class,
+but I am unsure
 
 ##Notes
 

@@ -2,7 +2,7 @@ This application is intended to run basic model rocket simulations
 
 ##Authors
 
-Wendall Roberts
+Pandora Roberts
 
 ##Version
 v 0.1.0

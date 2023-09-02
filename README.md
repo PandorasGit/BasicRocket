@@ -14,8 +14,7 @@ Print Results to command Line
 
 Current main entry point is opening it via intelij ide and
 right-clicking run on the Main class.
-I am assuming it can also just be ran via the cmd by opening the main class,
-but I am unsure
+
 
 ##Notes
 
